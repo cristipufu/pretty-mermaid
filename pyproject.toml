@@ -1,0 +1,25 @@
+[project]
+name = "pretty-mermaid"
+version = "0.1.0"
+description = "Render Mermaid diagrams to beautiful SVG and ASCII/Unicode art"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = ["grandalf>=0.8"]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "mypy>=1.8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pretty_mermaid"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
